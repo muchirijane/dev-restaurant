@@ -1,0 +1,27 @@
+.accomplishment{
+    grid-column: 1/-1;
+    background-image: url(../img/accomplishment-bg.svg);
+    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap: 5rem;
+    justify-items: center;
+    color: #fff;
+    padding: 4rem;
+    padding-top: 6rem;
+    align-items: center;
+
+    @media only screen and (max-width: $md-mobile){
+        grid-gap: 8rem;
+        background-color: #292929;
+        background-image: none;
+    }
+
+    &__icon{
+        height: 7rem;
+    }
+
+    &__number{
+        font-size: 2rem;
+    }
+}

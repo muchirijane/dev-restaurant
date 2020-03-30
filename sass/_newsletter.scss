@@ -1,0 +1,94 @@
+.newsletter{
+    grid-column: 1/-1;
+    background-image: url(../img/accomplishment-bg.svg);
+    background-size: cover;
+    color: #fff;
+    padding: 6rem;
+    width: 80%;
+    margin: auto;
+    z-index: 100;
+    margin-top: -15rem;
+    box-shadow: 0 15px 30px rgba(#000, .3);
+
+    @media only screen and (max-width: $big-desktop){
+        padding-right: 3rem;
+        position: relative;
+        top: -70%;
+    }
+
+    @media only screen and (max-width: $md-tab){
+        width: 100%;
+    }
+
+    @media only screen and (max-width: $bg-mobile){
+        top: -40%;
+    }
+    
+
+
+    &__detail{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+        grid-gap: 5rem;
+        align-items: center;
+
+        @media only screen and (max-width: $bg-mobile){
+            grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        }
+    }
+
+    &__title{
+        font-size: 6rem;
+        line-height: 1;
+        padding-bottom: 3rem;
+    }
+
+    &__text{
+        font-size: 1.8rem;
+    }
+
+    &__signup{
+        padding-top: 5rem;
+
+        input{
+            outline: none;
+            border: none;
+            width: 65%;
+            height: 5rem;
+            border-radius: 4px;
+
+            @media only screen and (max-width: $big-desktop){
+                width: 60%;
+            }
+
+            @media only screen and (max-width: $laptop){
+                width: 90%;
+                height: 6rem;
+            }
+        }
+    }
+
+    &__cta{
+        outline: none;
+        border: none;
+        background-color: #fff;
+        color: #000;
+        padding: 1.5rem 3rem;
+        margin-left: 2rem;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        border-radius: 4px;
+
+        @media only screen and (max-width: $laptop){
+            margin-left: none;
+        }
+
+        a:link,
+        a:visited{
+            text-decoration: none;
+            outline: none;
+            color: #000;
+
+        }
+    }
+}

@@ -1,0 +1,234 @@
+%heading{
+    text-align: center;
+    font-size: 4rem;
+}
+
+.food{
+    grid-column: 1/-1;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+
+    // @media only screen and (max-width: $big-laptop){
+    //     margin-top: -10rem;
+    //  }
+
+    //  @media only screen and (max-width: $md-laptop){
+    //     margin-top: -30rem;
+    // }
+    // @media only screen and (max-width: $sm-laptop){
+    //     margin-top: -50rem;
+    // }
+
+    // @media only screen and (max-width: $sm-laptop){
+    //     margin-top: -65rem;
+    // }
+
+    // @media only screen and (max-width: $bg-mobile){
+    //     margin-top: -75rem;
+    // }
+
+    &__title{
+        @extend %heading;
+        font-weight: 300;
+    }
+
+    &__subtitle{
+        @extend %heading;
+    }
+
+    &__icon{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        margin: 5rem 30rem;
+        grid-column-gap: 2rem;
+        background-color: #fff;
+        box-shadow: 0 2px 6px rgba(#000, .2);
+        border-radius: 1rem;
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+
+        @media only screen and (max-width: $sm-laptop){
+            margin: 5rem 14rem;
+        }
+        @media only screen and (min-width: $laptop){
+            margin: 5rem 10rem;
+        }
+
+        @media only screen and (max-width: $tab){
+            margin: 5rem 8rem;
+        }
+
+        @media only screen and (max-width: $tab){
+            margin: 5rem 8rem;
+        }
+
+        @media only screen and (max-width: $bg-mobile){
+            margin: 5rem 6rem;
+        }
+        @media only screen and (max-width: $md-mobile){
+            margin: 5rem 1.6rem;
+        }
+
+        &-menu{
+            background-color: #fff;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            //margin: 0 2rem;
+            padding: 2rem;
+            border-top-left-radius: 1rem;
+            border-bottom-left-radius: 1rem;
+
+        }
+
+        &-menu1{
+            background-color: #000;
+        }
+        &-menu5{
+            border-top-right-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+        }
+
+        &-img{
+            margin-bottom: 1rem;
+
+            @media only screen and (max-width: $bg-mobile){
+                height: 6rem;
+            }
+
+            @media only screen and (max-width: $md-mobile){
+                height: 4rem;
+            }
+        }
+
+        &-text1{
+            color: #fff;
+        }
+
+
+        &-text{
+            color: #000;
+        }
+    }
+
+    &__menu{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        grid-row-gap: 3rem;
+        margin: 4rem 9rem;
+        padding: 2rem;
+        align-items: center;
+
+        &--item{
+            padding: 2rem 3rem;
+            text-align: center;
+        }
+
+        &--price{
+            background-color: #000;
+            height: 4rem;
+            width: 4rem;
+            border-radius: 50%;
+            position: absolute;
+            z-index: 100;
+            margin-left: 20rem;
+            margin-top: -2rem;
+            transition: all .2s;
+            
+            @media only screen and (max-width: $mini-laptop){
+                margin-left: 23rem;
+            }
+
+            @media only screen and (max-width: $sm-laptop){
+                margin-left: 25rem;
+            }
+            @media only screen and (max-width: $laptop){
+                margin-left: 22rem;
+            }
+            @media only screen and (max-width: $md-tab){
+                margin-left: 26rem;
+             }
+             @media only screen and (max-width: $tab){
+                margin-left: 22rem;
+            }
+            @media only screen and (max-width: $tab-2){
+                margin-left: 35rem;
+            }
+
+            @media only screen and (max-width: $bg-mobile){
+                margin-left: 28rem;
+            }
+
+            @media only screen and (max-width: $md-mobile){
+                margin-left: 21rem;
+            }
+
+            p{
+                color: #fff;
+                text-align: center;
+                position: relative;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+
+            &:hover{
+                transform: scale(1.5) rotate(360deg);
+            }
+        }
+
+        &--img{
+            margin-bottom: 1rem;
+        }
+
+        &--title{
+            padding-bottom: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+        }
+
+        &--btn{
+            outline: none;
+            background-color: transparent;
+            border: 1px solid #000;
+            padding: 1rem 4rem;
+            margin-top: 2rem;
+            border-radius: 2rem;
+            cursor: pointer;
+
+            &:hover{
+                background-color: #000;
+                color: #fff;
+                border: none;
+            }
+        }
+
+        &-cta{
+            outline: none;
+            border: none;
+            background-color: #000;
+            color: #fff;
+            padding: 2rem 8rem;
+            border-radius: 5rem;
+            cursor: pointer;
+
+            position: relative;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin-top: 10rem;
+
+        }
+    }
+
+    &__wave-bg{
+        background-image: url(../img/wave-white.svg);
+        width: 100%;
+        height: 4rem;
+        position: relative;
+        bottom: -3rem;
+        transform: rotate(180deg);
+    }
+    
+}

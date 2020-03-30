@@ -1,0 +1,213 @@
+// .header__img{
+//     background-image: url(../img/header-bg.png);
+//     background-repeat: no-repeat;
+//     background-size: 100%;
+//     min-height: 100vh;
+//     height: 100rem;
+//     z-index: 80;
+// }
+
+.header{
+    grid-column: 1/-1;
+    color: #fff;
+    
+    &__img{
+        background-image: url(../img/header-bg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 100vh;
+        height: 100rem;
+        z-index: 80;
+    }
+
+    &__top{
+        display: flex;
+        padding: 3rem 5rem;
+        align-items: center;
+        background-color: #050505;
+        position: fixed;
+        height: 10rem;
+        width: 100vw;
+        z-index: 1000;
+        box-shadow: 0 4px 10px rgba(#050505, .2);
+
+        @media only screen and (max-width: $big-desktop){
+            padding: 3rem 3rem;
+        }
+    }
+
+    &__logo{
+        color: #fff;
+        padding-right: 17rem;
+        font-weight: 700;
+        font-size: 2.5rem;
+        display: block ruby;
+        padding-left: 2rem;
+
+        @media only screen and (max-width: $sm-laptop){
+            position: absolute;
+        }
+       
+    }
+
+    &__item{
+        position: relative;
+        top: 27%;
+
+        @media only screen and (max-width: $big-desktop){
+            top: 50%;
+         }
+
+         @media only screen and (max-width: $big-desktop){
+            top: 46%;
+         }
+
+         @media only screen and (max-width: $mini-laptop){
+            top: 30%;
+        }
+
+        @media only screen and (max-width: $tab){
+            top: 23%;
+        }
+        @media only screen and (max-width: $bg-mobile){
+            top: 20%;
+        }
+    }
+
+    &__detail{
+        display: inline-block;
+        position: absolute;
+        left: 7%;
+        top: 50%;
+        margin-left: 5rem;
+        z-index: 90;
+
+        @media only screen and (max-width: $md-laptop){
+            top: 20%;
+        }
+        @media only screen and (max-width: $laptop){
+            top: 16%;
+        }
+        @media only screen and (max-width: $tab){
+            top: 8%;
+        }
+    }
+
+    &__text{
+        font-size: 7rem;
+        font-weight: 400;
+
+        @media only screen and (max-width: $md-laptop){
+            font-size: 8rem;
+        }
+
+        @media only screen and (max-width: $tab){
+            font-size: 9rem;
+        }
+
+        @media only screen and (max-width: $bg-mobile){
+            font-size: 8rem;
+        }
+        @media only screen and (max-width: $md-mobile){
+            font-size: 5rem;
+        }
+    }
+
+    &__title{
+        font-size: 7rem;
+
+        @media only screen and (max-width: $md-laptop){
+            font-size: 8rem;
+        }
+
+        @media only screen and (max-width: $bg-mobile){
+            font-size: 8rem;
+        }
+        @media only screen and (max-width: $md-mobile){
+            font-size: 7rem;
+        }
+
+        span{
+            display: block;
+        }
+    }
+
+    &__menu{
+        display: flex;
+        align-items: center;
+        padding-top: 6rem;
+        font-size: 2rem;
+
+        @media only screen and (max-width: $laptop){
+            padding-top: 2.5rem;
+        }
+
+        @media only screen and (max-width: $tab){
+            padding-top: .4em;
+        }
+
+        &--line{
+            width: 4rem;
+            height: 2px;
+            background-color: #fff;
+            margin-right: 2rem;
+
+            
+        }
+        &--check{
+            
+            a:link,
+            a:visited{
+                text-decoration: none;
+                color: #fff;
+            }
+        }
+    }
+
+        &__line{
+            margin-bottom: 2rem;
+            padding-left: 3rem;
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            margin-top: 8rem;
+
+            @media only screen and (max-width: $md-laptop){
+                top: 30%;
+            }
+            @media only screen and (max-width: $laptop){
+               top: 25%;
+            }
+
+            @media only screen and (max-width: $tab){
+                top: 20%;
+                padding-left: 1.4rem;
+            }
+
+            @media only screen and (max-width: $bg-mobile){
+                top: 14%;
+                padding-left: 1rem;
+            }
+
+            @media only screen and (max-width: $md-mobile){
+                top: 10%;
+            }
+    
+            &--item{
+                margin-bottom: 2rem;
+                background-color: transparent;
+                border: none;
+                padding-right: 1rem;
+                font-size: 2.7rem;
+    
+    
+                a:link,
+                a:visited{
+                    text-decoration: none;
+                    color: #fff;
+                }
+            }
+        }
+}
+
+

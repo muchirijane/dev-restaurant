@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>Dev restaurant</title>
+</head>
+<body>
+    <main class="container">
+    <header class="header">
+       <div class="header__top">
+
+            <div class="header__logo">
+
+                <svg width="179" height="20" viewBox="0 0 179 20" fill="none" xmlns="http://www.w3.org/2000/svg" id="logo">
+                    <path d="M2.45002 19C1.96669 19 1.58336 18.8667 1.30002 18.6C1.03336 18.3333 0.900024 17.9583 0.900024 17.475V2.9C0.900024 2.41667 1.03336 2.04167 1.30002 1.775C1.58336 1.50833 1.96669 1.375 2.45002 1.375H7.40002C10.2834 1.375 12.5167 2.15 14.1 3.7C15.7 5.23333 16.5 7.39167 16.5 10.175C16.5 12.975 15.7 15.15 14.1 16.7C12.5167 18.2333 10.2834 19 7.40002 19H2.45002ZM7.20002 16.375C11.25 16.375 13.275 14.3083 13.275 10.175C13.275 6.05833 11.25 4 7.20002 4H4.12502V16.375H7.20002Z" stroke="white"/>
+                    <path d="M29.1477 15.65C29.431 15.65 29.656 15.7583 29.8227 15.975C30.006 16.1917 30.0977 16.4833 30.0977 16.85C30.0977 17.3667 29.7893 17.8 29.1727 18.15C28.606 18.4667 27.9643 18.725 27.2477 18.925C26.531 19.1083 25.8477 19.2 25.1977 19.2C23.231 19.2 21.6727 18.6333 20.5227 17.5C19.3727 16.3667 18.7977 14.8167 18.7977 12.85C18.7977 11.6 19.0477 10.4917 19.5477 9.525C20.0477 8.55833 20.7477 7.80833 21.6477 7.275C22.5643 6.74167 23.5977 6.475 24.7477 6.475C25.8477 6.475 26.806 6.71667 27.6227 7.2C28.4393 7.68333 29.0727 8.36667 29.5227 9.25C29.9727 10.1333 30.1977 11.175 30.1977 12.375C30.1977 13.0917 29.881 13.45 29.2477 13.45H21.8727C21.9727 14.6 22.2977 15.45 22.8477 16C23.3977 16.5333 24.1977 16.8 25.2477 16.8C25.781 16.8 26.2477 16.7333 26.6477 16.6C27.0643 16.4667 27.531 16.2833 28.0477 16.05C28.5477 15.7833 28.9143 15.65 29.1477 15.65ZM24.8227 8.675C23.9727 8.675 23.2893 8.94167 22.7727 9.475C22.2727 10.0083 21.9727 10.775 21.8727 11.775H27.5227C27.4893 10.7583 27.2393 9.99167 26.7727 9.475C26.306 8.94167 25.656 8.675 24.8227 8.675Z" stroke="white"/>
+                    <path d="M41.0836 7.425C41.217 7.125 41.3919 6.9 41.6086 6.75C41.8419 6.6 42.0919 6.525 42.3586 6.525C42.7419 6.525 43.0836 6.65833 43.3836 6.925C43.7003 7.175 43.8586 7.49167 43.8586 7.875C43.8586 8.075 43.8086 8.275 43.7086 8.475L39.0836 18.15C38.9336 18.4667 38.7169 18.7083 38.4336 18.875C38.1669 19.0417 37.8669 19.125 37.5336 19.125C37.2169 19.125 36.9086 19.0417 36.6086 18.875C36.3253 18.7083 36.1086 18.4667 35.9586 18.15L31.3086 8.475C31.2253 8.30833 31.1836 8.11667 31.1836 7.9C31.1836 7.51667 31.342 7.19167 31.6586 6.925C31.992 6.65833 32.367 6.525 32.7836 6.525C33.3836 6.525 33.8253 6.81667 34.1086 7.4L37.6086 15.125L41.0836 7.425Z" stroke="white"/>
+                    <path d="M66.8799 16.975C67.0799 17.275 67.1799 17.5667 67.1799 17.85C67.1799 18.2333 67.0216 18.55 66.7049 18.8C66.4049 19.05 66.0466 19.175 65.6299 19.175C65.3632 19.175 65.1049 19.1167 64.8549 19C64.6216 18.8667 64.4216 18.675 64.2549 18.425L60.9299 13.375C60.5966 12.8417 60.2382 12.4667 59.8549 12.25C59.4882 12.0333 59.0049 11.925 58.4049 11.925H55.9549V17.525C55.9549 18.025 55.8132 18.425 55.5299 18.725C55.2466 19.0083 54.8632 19.15 54.3799 19.15C53.8966 19.15 53.5049 19.0083 53.2049 18.725C52.9216 18.425 52.7799 18.025 52.7799 17.525V2.9C52.7799 2.41667 52.9132 2.04167 53.1799 1.775C53.4632 1.50833 53.8466 1.375 54.3299 1.375H60.5799C62.5799 1.375 64.0966 1.825 65.1299 2.725C66.1799 3.60833 66.7049 4.89167 66.7049 6.575C66.7049 7.94167 66.3132 9.06667 65.5299 9.95C64.7632 10.8167 63.6716 11.375 62.2549 11.625C62.7382 11.7417 63.1632 11.95 63.5299 12.25C63.8966 12.55 64.2549 12.9667 64.6049 13.5L66.8799 16.975ZM60.1299 9.45C61.3466 9.45 62.2382 9.225 62.8049 8.775C63.3716 8.30833 63.6549 7.6 63.6549 6.65C63.6549 5.68333 63.3716 4.98333 62.8049 4.55C62.2382 4.1 61.3466 3.875 60.1299 3.875H55.9299V9.45H60.1299Z" stroke="white"/>
+                    <path d="M79.5627 15.65C79.8461 15.65 80.071 15.7583 80.2377 15.975C80.421 16.1917 80.5127 16.4833 80.5127 16.85C80.5127 17.3667 80.2044 17.8 79.5877 18.15C79.021 18.4667 78.3794 18.725 77.6627 18.925C76.9461 19.1083 76.2627 19.2 75.6127 19.2C73.6461 19.2 72.0877 18.6333 70.9377 17.5C69.7877 16.3667 69.2127 14.8167 69.2127 12.85C69.2127 11.6 69.4627 10.4917 69.9627 9.525C70.4627 8.55833 71.1627 7.80833 72.0627 7.275C72.9794 6.74167 74.0127 6.475 75.1627 6.475C76.2627 6.475 77.2211 6.71667 78.0377 7.2C78.8544 7.68333 79.4877 8.36667 79.9377 9.25C80.3877 10.1333 80.6127 11.175 80.6127 12.375C80.6127 13.0917 80.2961 13.45 79.6627 13.45H72.2877C72.3877 14.6 72.7127 15.45 73.2627 16C73.8127 16.5333 74.6127 16.8 75.6627 16.8C76.1961 16.8 76.6627 16.7333 77.0627 16.6C77.4794 16.4667 77.946 16.2833 78.4627 16.05C78.9627 15.7833 79.3294 15.65 79.5627 15.65ZM75.2377 8.675C74.3877 8.675 73.7044 8.94167 73.1877 9.475C72.6877 10.0083 72.3877 10.775 72.2877 11.775H77.9377C77.9044 10.7583 77.6544 9.99167 77.1877 9.475C76.7211 8.94167 76.0711 8.675 75.2377 8.675Z" stroke="white"/>
+                    <path d="M87.594 19.2C85.7773 19.2 84.3106 18.8417 83.194 18.125C82.6606 17.8083 82.394 17.3583 82.394 16.775C82.394 16.4417 82.4856 16.175 82.669 15.975C82.8523 15.7583 83.0773 15.65 83.344 15.65C83.6273 15.65 84.019 15.7833 84.519 16.05C85.0523 16.3 85.5356 16.4917 85.969 16.625C86.419 16.7583 86.9856 16.825 87.669 16.825C88.369 16.825 88.9106 16.7083 89.294 16.475C89.694 16.2417 89.894 15.9167 89.894 15.5C89.894 15.2167 89.8106 14.9917 89.644 14.825C89.494 14.6583 89.2106 14.5083 88.794 14.375C88.394 14.225 87.7773 14.0583 86.944 13.875C85.4606 13.575 84.394 13.15 83.744 12.6C83.1106 12.05 82.794 11.2917 82.794 10.325C82.794 9.59167 83.0106 8.93333 83.444 8.35C83.8773 7.75 84.469 7.29167 85.219 6.975C85.9856 6.64167 86.8523 6.475 87.819 6.475C88.519 6.475 89.194 6.56667 89.844 6.75C90.494 6.91667 91.0773 7.16667 91.594 7.5C92.1273 7.83333 92.394 8.275 92.394 8.825C92.394 9.15833 92.3023 9.44167 92.119 9.675C91.9356 9.89167 91.7106 10 91.444 10C91.2606 10 91.0773 9.96667 90.894 9.9C90.7273 9.81667 90.5106 9.7 90.244 9.55C89.7606 9.3 89.344 9.11667 88.994 9C88.644 8.86667 88.2106 8.8 87.694 8.8C87.0773 8.8 86.5856 8.925 86.219 9.175C85.869 9.425 85.694 9.76667 85.694 10.2C85.694 10.6167 85.8773 10.9333 86.244 11.15C86.6106 11.3667 87.319 11.5833 88.369 11.8C89.4856 12.0333 90.3606 12.3 90.994 12.6C91.6273 12.9 92.0773 13.275 92.344 13.725C92.6273 14.175 92.769 14.75 92.769 15.45C92.769 16.5833 92.294 17.4917 91.344 18.175C90.4106 18.8583 89.1606 19.2 87.594 19.2Z" stroke="white"/>
+                    <path d="M101.531 16.825C102.364 16.875 102.781 17.25 102.781 17.95C102.781 18.35 102.614 18.6583 102.281 18.875C101.964 19.075 101.506 19.1583 100.906 19.125L100.231 19.075C97.4307 18.875 96.0307 17.375 96.0307 14.575V9.125H94.7807C94.3307 9.125 93.9807 9.025 93.7307 8.825C93.4974 8.625 93.3807 8.33333 93.3807 7.95C93.3807 7.56667 93.4974 7.275 93.7307 7.075C93.9807 6.875 94.3307 6.775 94.7807 6.775H96.0307V4.475C96.0307 4.025 96.1724 3.66667 96.4557 3.4C96.739 3.13333 97.1224 3 97.6057 3C98.0724 3 98.4474 3.13333 98.7307 3.4C99.014 3.66667 99.1557 4.025 99.1557 4.475V6.775H101.281C101.731 6.775 102.072 6.875 102.306 7.075C102.556 7.275 102.681 7.56667 102.681 7.95C102.681 8.33333 102.556 8.625 102.306 8.825C102.072 9.025 101.731 9.125 101.281 9.125H99.1557V14.8C99.1557 16.0333 99.7224 16.6917 100.856 16.775L101.531 16.825Z" stroke="white"/>
+                    <path d="M109.709 6.475C111.409 6.475 112.668 6.9 113.484 7.75C114.318 8.58333 114.734 9.85833 114.734 11.575V17.675C114.734 18.125 114.601 18.4833 114.334 18.75C114.068 19 113.701 19.125 113.234 19.125C112.801 19.125 112.443 18.9917 112.159 18.725C111.893 18.4583 111.759 18.1083 111.759 17.675V17.125C111.476 17.775 111.026 18.2833 110.409 18.65C109.809 19.0167 109.109 19.2 108.309 19.2C107.493 19.2 106.751 19.0333 106.084 18.7C105.418 18.3667 104.893 17.9083 104.509 17.325C104.126 16.7417 103.934 16.0917 103.934 15.375C103.934 14.475 104.159 13.7667 104.609 13.25C105.076 12.7333 105.826 12.3583 106.859 12.125C107.893 11.8917 109.318 11.775 111.134 11.775H111.759V11.2C111.759 10.3833 111.584 9.79167 111.234 9.425C110.884 9.04167 110.318 8.85 109.534 8.85C109.051 8.85 108.559 8.925 108.059 9.075C107.559 9.20833 106.968 9.40833 106.284 9.675C105.851 9.89167 105.534 10 105.334 10C105.034 10 104.784 9.89167 104.584 9.675C104.401 9.45833 104.309 9.175 104.309 8.825C104.309 8.54167 104.376 8.3 104.509 8.1C104.659 7.88333 104.901 7.68333 105.234 7.5C105.818 7.18333 106.509 6.93333 107.309 6.75C108.126 6.56667 108.926 6.475 109.709 6.475ZM108.934 16.95C109.768 16.95 110.443 16.675 110.959 16.125C111.493 15.5583 111.759 14.8333 111.759 13.95V13.425H111.309C110.193 13.425 109.326 13.475 108.709 13.575C108.093 13.675 107.651 13.85 107.384 14.1C107.118 14.35 106.984 14.6917 106.984 15.125C106.984 15.6583 107.168 16.1 107.534 16.45C107.918 16.7833 108.384 16.95 108.934 16.95Z" stroke="white"/>
+                    <path d="M127.56 6.525C128.044 6.525 128.427 6.65833 128.71 6.925C128.994 7.19167 129.135 7.55 129.135 8V17.7C129.135 18.1333 128.985 18.4833 128.685 18.75C128.402 19.0167 128.027 19.15 127.56 19.15C127.11 19.15 126.752 19.025 126.485 18.775C126.219 18.525 126.085 18.1833 126.085 17.75V17.125C125.702 17.7917 125.185 18.3083 124.535 18.675C123.885 19.025 123.152 19.2 122.335 19.2C119.335 19.2 117.835 17.5167 117.835 14.15V8C117.835 7.55 117.977 7.19167 118.26 6.925C118.544 6.65833 118.919 6.525 119.385 6.525C119.869 6.525 120.252 6.65833 120.535 6.925C120.819 7.19167 120.96 7.55 120.96 8V14.175C120.96 15.0417 121.135 15.6833 121.485 16.1C121.835 16.5167 122.385 16.725 123.135 16.725C124.002 16.725 124.694 16.4417 125.21 15.875C125.744 15.2917 126.01 14.525 126.01 13.575V8C126.01 7.55 126.152 7.19167 126.435 6.925C126.719 6.65833 127.094 6.525 127.56 6.525Z" stroke="white"/>
+                    <path d="M139.213 6.525C139.646 6.49167 139.988 6.58333 140.238 6.8C140.488 7.01667 140.613 7.34167 140.613 7.775C140.613 8.225 140.504 8.55833 140.288 8.775C140.071 8.99167 139.679 9.13333 139.113 9.2L138.363 9.275C137.379 9.375 136.654 9.70833 136.188 10.275C135.738 10.8417 135.513 11.55 135.513 12.4V17.65C135.513 18.1333 135.363 18.5083 135.063 18.775C134.763 19.025 134.388 19.15 133.938 19.15C133.488 19.15 133.113 19.025 132.813 18.775C132.529 18.5083 132.388 18.1333 132.388 17.65V7.975C132.388 7.50833 132.529 7.15 132.813 6.9C133.113 6.65 133.479 6.525 133.913 6.525C134.346 6.525 134.696 6.65 134.963 6.9C135.229 7.13333 135.363 7.475 135.363 7.925V8.925C135.679 8.19167 136.146 7.625 136.763 7.225C137.396 6.825 138.096 6.6 138.863 6.55L139.213 6.525Z" stroke="white"/>
+                    <path d="M147.209 6.475C148.909 6.475 150.168 6.9 150.984 7.75C151.818 8.58333 152.234 9.85833 152.234 11.575V17.675C152.234 18.125 152.101 18.4833 151.834 18.75C151.568 19 151.201 19.125 150.734 19.125C150.301 19.125 149.943 18.9917 149.659 18.725C149.393 18.4583 149.259 18.1083 149.259 17.675V17.125C148.976 17.775 148.526 18.2833 147.909 18.65C147.309 19.0167 146.609 19.2 145.809 19.2C144.993 19.2 144.251 19.0333 143.584 18.7C142.918 18.3667 142.393 17.9083 142.009 17.325C141.626 16.7417 141.434 16.0917 141.434 15.375C141.434 14.475 141.659 13.7667 142.109 13.25C142.576 12.7333 143.326 12.3583 144.359 12.125C145.393 11.8917 146.818 11.775 148.634 11.775H149.259V11.2C149.259 10.3833 149.084 9.79167 148.734 9.425C148.384 9.04167 147.818 8.85 147.034 8.85C146.551 8.85 146.059 8.925 145.559 9.075C145.059 9.20833 144.468 9.40833 143.784 9.675C143.351 9.89167 143.034 10 142.834 10C142.534 10 142.284 9.89167 142.084 9.675C141.901 9.45833 141.809 9.175 141.809 8.825C141.809 8.54167 141.876 8.3 142.009 8.1C142.159 7.88333 142.401 7.68333 142.734 7.5C143.318 7.18333 144.009 6.93333 144.809 6.75C145.626 6.56667 146.426 6.475 147.209 6.475ZM146.434 16.95C147.268 16.95 147.943 16.675 148.459 16.125C148.993 15.5583 149.259 14.8333 149.259 13.95V13.425H148.809C147.693 13.425 146.826 13.475 146.209 13.575C145.593 13.675 145.151 13.85 144.884 14.1C144.618 14.35 144.484 14.6917 144.484 15.125C144.484 15.6583 144.668 16.1 145.034 16.45C145.418 16.7833 145.884 16.95 146.434 16.95Z" stroke="white"/>
+                    <path d="M162.51 6.475C163.977 6.475 165.069 6.89167 165.785 7.725C166.502 8.55833 166.86 9.81667 166.86 11.5V17.65C166.86 18.1167 166.719 18.4833 166.435 18.75C166.169 19.0167 165.794 19.15 165.31 19.15C164.827 19.15 164.444 19.0167 164.16 18.75C163.877 18.4833 163.735 18.1167 163.735 17.65V11.675C163.735 10.725 163.552 10.0333 163.185 9.6C162.835 9.16667 162.277 8.95 161.51 8.95C160.61 8.95 159.885 9.23333 159.335 9.8C158.802 10.3667 158.535 11.125 158.535 12.075V17.65C158.535 18.1167 158.394 18.4833 158.11 18.75C157.827 19.0167 157.444 19.15 156.96 19.15C156.477 19.15 156.094 19.0167 155.81 18.75C155.544 18.4833 155.41 18.1167 155.41 17.65V7.975C155.41 7.54167 155.552 7.19167 155.835 6.925C156.119 6.65833 156.502 6.525 156.985 6.525C157.419 6.525 157.769 6.65833 158.035 6.925C158.319 7.175 158.46 7.50833 158.46 7.925V8.6C158.877 7.91667 159.435 7.39167 160.135 7.025C160.835 6.65833 161.627 6.475 162.51 6.475Z" stroke="white"/>
+                    <path d="M176.384 16.825C177.218 16.875 177.634 17.25 177.634 17.95C177.634 18.35 177.468 18.6583 177.134 18.875C176.818 19.075 176.359 19.1583 175.759 19.125L175.084 19.075C172.284 18.875 170.884 17.375 170.884 14.575V9.125H169.634C169.184 9.125 168.834 9.025 168.584 8.825C168.351 8.625 168.234 8.33333 168.234 7.95C168.234 7.56667 168.351 7.275 168.584 7.075C168.834 6.875 169.184 6.775 169.634 6.775H170.884V4.475C170.884 4.025 171.026 3.66667 171.309 3.4C171.593 3.13333 171.976 3 172.459 3C172.926 3 173.301 3.13333 173.584 3.4C173.868 3.66667 174.009 4.025 174.009 4.475V6.775H176.134C176.584 6.775 176.926 6.875 177.159 7.075C177.409 7.275 177.534 7.56667 177.534 7.95C177.534 8.33333 177.409 8.625 177.159 8.825C176.926 9.025 176.584 9.125 176.134 9.125H174.009V14.8C174.009 16.0333 174.576 16.6917 175.709 16.775L176.384 16.825Z" stroke="white"/>
+                    </svg>
+
+            </div>
+            
+            
+
+            <nav class="nav">
+                    <input type="checkbox" name="menu" id="menu" class="checkbox">
+                <label for="menu" class="checkbox-menu">
+                    <i class="fas fa-bars"></i>
+                </label>
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="#story" class="nav__link">About Us</a></li>
+                    <li class="nav__item"><a href="#menu-set" class="nav__link">Menu</a></li>
+                    <li class="nav__item"><a href="#recipe" class="nav__link">Recipes</a></li>
+                    <li class="nav__item"><a href="#chef" class="nav__link">Chef</a></li>
+                    <li class="nav__item"><a href="#blog" class="nav__link">Blog</a></li>
+                    <button class=" nav__btn"> <a href="#reserve">Reservations</a></button>
+                    <input type="checkbox" name="menu" id="menu" class="checkbox">
+                   <label for="menu" class="checkbox-menu checkbox-menu__times">
+                    <i class="fas fa-times"></i>
+                   </label>
+                </ul>
+            </nav>
+        </div>
+        <div class="header__img">
+            <div class="header__item">
+                    <div class="header__line">
+                            <div class="header__line--item"><a href="#"> 01 </a></div>
+                            <div class="header__line--item"><a href="#head-2"> 02 </a></div>
+                            <div class="header__line--item"><a href="#head-3"> 03 </a></div>
+                        </div>
+                        <div class="header__detail">
+                            <h2 class="header__text">For happy day</h2>
+                            <h1 class="header__title">
+                                <span>Enjoy</span>
+                                <span>Happy Meal</span>
+                            </h1>
+                            <div class="header__menu">
+                                <div class="header__menu--line"></div>
+                                <div class="header__menu--check">
+                                    <a href="#*
+                                    menu-set">Check our menu</a>
+                                </div>
+                            </div>
+                        </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="story" id="story">
+        <img src="img/wave.svg" alt="wave photo" class="story__photo">
+        <div class="story__feature">
+            <div class="story__feature-item">
+                <img src="img/Quality-food.svg" alt="Quality-food icon" class="story__feature-image">
+                <h3 class="story__feature--title">QUALITY FOODS</h3>
+                <p class="story__feature--text">
+                        Sit amet, consectetur adipiscing elit quisque eget maximus
+                         velit, non eleifend libero curabitur dapibus mauris sed leo cursus aliquetcras suscipit.
+                </p>
+            </div>
+            <div class="story__feature-item">
+                    <img src="img/deliver.svg" alt="Quality-food icon" class="story__feature-image">
+                    <h3 class="story__feature--title">Fast Delivery</h3>
+                    <p class="story__feature--text">
+                            Sit amet, consectetur adipiscing elit quisque eget maximus
+                             velit, non eleifend libero curabitur dapibus mauris sed leo cursus aliquetcras suscipit.
+                    </p>
+                </div>
+                <div class="story__feature-item">
+                        <img src="img/recipes.svg" alt="Quality-food icon" class="story__feature-image">
+                        <h3 class="story__feature--title">Original Recipes</h3>
+                        <p class="story__feature--text">
+                                Sit amet, consectetur adipiscing elit quisque eget maximus
+                                 velit, non eleifend libero curabitur dapibus mauris sed leo cursus aliquetcras suscipit.
+                        </p>
+                 </div>
+        </div>
+         
+        <div id="about-us" class="discover" data-aos="fade-down"
+                              data-aos-easing="linear"
+                              data-aos-duration="1500">
+            <img src="img/story.png" alt="headf chef" class="discover__image">
+            <div class="discover__detail">
+                <h2 class="discover__title">Discover</h2>
+                <h3 class="discover__subtitle">Our story</h3>
+                <p class="discover__title-text">Ultimate dinning experience like no other</p>
+                <p class="discover__text">
+                    One of the notable character traits of a successful small restaurant owner is the ability to easily solve 
+                    problems. Problem-solving is a skill and most of the time comes with being open-minded.
+                </p>
+                <p class="discover__text">
+                    Successful entrepreneurs are open-minded people and as such good optimists, critical 
+                    thinkers and problem solvers. As a small restaurant owner, you need to be able to proffer quick 
+                    solutions to any problem that may arise in the course of your business day.
+
+                </p>
+                <p class="discover__founder">OUR FOUNDER JOHN PHILLIPE</p>
+                <p class="discover__author">Devil Roy Barman</p>
+            </div>
+        </div>
+        <div class="discover__wave-bg"></div>
+    </section>
+
+    <section class="food" id="menu">
+   
+        <h2 class="food__title">Let's discover food</h2>
+        <h3 class="food__subtitle">Special dishes today</h3>
+
+        <div class="food__icon">
+            <button class="food__icon-menu food__icon-menu1" onclick="foodTab('lunch')">
+                <img src="img/dinner.svg" alt="dinner tab" class="food__icon-img">
+                <p class="food__icon-text1">Dinner</p>
+            </button>
+            <button class="food__icon-menu">
+                <img src="img/lunch.svg" alt="lunch tab" class="food__icon-img">
+                <p class="food__icon-text">Lunch</p>
+            </button>
+            <button class="food__icon-menu">
+                <img src="img/desert.svg" alt="desert tab" class="food__icon-img">
+                <p class="food__icon-text">Desert</p>
+            </button>
+            <button class="food__icon-menu food__icon-menu5">
+                <img src="img/wine.svg" alt="wine tab" class="food__icon-img">
+                <p class="food__icon-text">wine</p>
+            </button>
+        </div>
+
+        <div class="food__menu" data-aos="zoom-in-up"
+                                data-aos-offset="300"
+                                data-aos-easing="ease-in-sine"
+                                data-aos-duration="1000">
+            <div class="food__menu--item">
+                <div class="food__menu--price"><p>$50</p></div>
+                <img src="img/toast.png" alt="banana toast" class="food__menu--img">
+                <p class="food__menu--title">Banana & Blueberry French Toast </p>
+                <p class="food__menu--text">
+                    Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit Fuidhir
+                </p>
+
+                <button class="food__menu--btn">Read more</button>
+            </div>
+            <div class="food__menu--item">
+                <div class="food__menu--price"><p>$39</p></div>
+                <img src="img/burger1.png" alt="cheese burger" class="food__menu--img">
+                <p class="food__menu--title">Cheese Burger </p>
+                <p class="food__menu--text">
+                    Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit Fuidhir
+                </p>
+
+                <button class="food__menu--btn">Read more</button>
+            </div>
+            <div class="food__menu--item">
+                <div class="food__menu--price"><p>$30</p></div>
+                <img src="img/pizza.png" alt="pizza" class="food__menu--img">
+                <p class="food__menu--title">pizza </p>
+                <p class="food__menu--text">
+                    Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit Fuidhir
+                </p>
+
+                <button class="food__menu--btn">Read more</button>
+            </div>
+            <div class="food__menu--item">
+                <div class="food__menu--price"><p>$20</p></div>
+                <img src="img/sandwich.png" alt="sandwich" class="food__menu--img">
+                <p class="food__menu--title">sandwich </p>
+                <p class="food__menu--text">
+                    Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit Fuidhir
+                </p>
+
+                <button class="food__menu--btn">Read more</button>
+            </div>
+            <div class="food__menu--item">
+                <div class="food__menu--price"><p>$35</p></div>
+                <img src="img/icecream.png" alt="icecream" class="food__menu--img">
+                <p class="food__menu--title">IceCream </p>
+                <p class="food__menu--text">
+                    Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit Fuidhir
+                </p>
+
+                <button class="food__menu--btn">Read more</button>
+            </div>
+            <div class="food__menu--item">
+                <div class="food__menu--price"><p>$59</p></div>
+                <img src="img/hotdog.png" alt="hotdog" class="food__menu--img">
+                <p class="food__menu--title">Hot dog </p>
+                <p class="food__menu--text">
+                    Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit Fuidhir
+                </p>
+
+                <button class="food__menu--btn">Read more</button>
+            </div>
+            <div class="food__menu--item">
+                <div class="food__menu--price"><p>$49</p></div>
+                <img src="img/burger2.png" alt="cheese burger" class="food__menu--img">
+                <p class="food__menu--title">Cheese Burger </p>
+                <p class="food__menu--text">
+                    Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit Fuidhir
+                </p>
+
+                <button class="food__menu--btn">Read more</button>
+            </div>
+            <div class="food__menu--item">
+                <div class="food__menu--price"><p>$50</p></div>
+                <img src="img/salad.png" alt="salad" class="food__menu--img">
+                <p class="food__menu--title">Salad </p>
+                <p class="food__menu--text">
+                    Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit Fuidhir
+                </p>
+
+                <button class="food__menu--btn">Read more</button>
+            </div>
+        </div>
+
+        <button class="food__menu-cta">View All</button>
+        <div class="food__wave-bg"></div>
+    </section>
+
+    <section class="menu" id="menu-set">
+
+        <div class="menu__item" data-aos="fade-right"
+                               data-aos-offset="300"
+                               data-aos-easing="ease-in-sine"
+                               data-aos-duration="1500">
+            <img src="img/menu-lunch.png" alt="Lunch item image" class="menu__item--image">
+            <div class="menu__detail">
+                <h2 class="menu__detail--title">Dev restaurant</h2>
+                <h3 class="menu__detail--subtitle">Lunch Set menu</h3>
+                <div class="menu__detail--price">
+                    <div class="menu__detail--item">
+                        <p class="menu__detail--name">Southwest beef fillet </p>
+                        <div class="menu__detail--line"></div>
+                        <div class="menu__detail--money">$50.00</div>
+                     </div>
+                    <p class="menu__detail--text">cooked medium on parsnip & potato gratin, seasonal vegetables, fig balsamic glaze </p>
+                </div>
+                
+                <div class="menu__detail--price">
+                        <div class="menu__detail--item">
+                            <p class="menu__detail--name">Grilled Angus sirloin  </p>
+                            <div class="menu__detail--line"></div>
+                            <div class="menu__detail--money">$30.00</div>
+                         </div>
+                        <p class="menu__detail--text">caramelized onion & goats cheese en croute, vegetable medley, red wine jus  </p>
+                </div>
+                <div class="menu__detail--price">
+                        <div class="menu__detail--item">
+                            <p class="menu__detail--name">Chicken thigh minion </p>
+                            <div class="menu__detail--line"></div>
+                            <div class="menu__detail--money">$20.00</div>
+                         </div>
+                        <p class="menu__detail--text">stuffed with bocconcini, on soft pesto polenta, seasonal vegetables, shiraz jus  </p>
+                </div>
+                <div class="menu__detail--price">
+                        <div class="menu__detail--item">
+                            <p class="menu__detail--name">Oven roasted chicken breast </p>
+                            <div class="menu__detail--line"></div>
+                            <div class="menu__detail--money">$39.00</div>
+                         </div>
+                        <p class="menu__detail--text">rustic cut herb potato wedges, steamed vegetables, porcini mushroom jus  </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu__item menu__item2" data-aos="fade-left"
+                                            
+                                            data-aos-offset="500"
+                                            data-aos-duration="2500">
+                <img src="img/menu-dinner.png" alt="dinner item image" class="menu__item--image menu__item--image2">
+                <div class="menu__detail menu__detail-2">
+                    <h2 class="menu__detail--title">Dev restaurant</h2>
+                    <h3 class="menu__detail--subtitle">Dinner Set menu</h3>
+                    <div class="menu__detail--price">
+                        <div class="menu__detail--item">
+                            <p class="menu__detail--name">Southwest beef fillet </p>
+                            <div class="menu__detail--line"></div>
+                            <div class="menu__detail--money">$50.00</div>
+                         </div>
+                        <p class="menu__detail--text">cooked medium on parsnip & potato gratin, seasonal vegetables, fig balsamic glaze </p>
+                    </div>
+                    
+                    <div class="menu__detail--price">
+                            <div class="menu__detail--item">
+                                <p class="menu__detail--name">Grilled Angus sirloin  </p>
+                                <div class="menu__detail--line"></div>
+                                <div class="menu__detail--money">$30.00</div>
+                             </div>
+                            <p class="menu__detail--text">caramelized onion & goats cheese en croute, vegetable medley, red wine jus  </p>
+                    </div>
+                    <div class="menu__detail--price">
+                            <div class="menu__detail--item">
+                                <p class="menu__detail--name">Chicken thigh minion </p>
+                                <div class="menu__detail--line"></div>
+                                <div class="menu__detail--money">$20.00</div>
+                             </div>
+                            <p class="menu__detail--text">stuffed with bocconcini, on soft pesto polenta, seasonal vegetables, shiraz jus  </p>
+                    </div>
+                    <div class="menu__detail--price">
+                            <div class="menu__detail--item">
+                                <p class="menu__detail--name">Oven roasted chicken breast </p>
+                                <div class="menu__detail--line"></div>
+                                <div class="menu__detail--money">$39.00</div>
+                             </div>
+                            <p class="menu__detail--text">rustic cut herb potato wedges, steamed vegetables, porcini mushroom jus  </p>
+                    </div>
+                </div>
+            </div>
+    </section>
+     <div class="testimonial">
+            <div class="glide">
+                    <div class="glide__track" data-glide-el="track">
+                      <ul class="glide__slides">
+                        <li class="glide__slide" id="#options-autoplay-input">
+                            <div class="testiominal__item">
+                                <div class="testimonial__detail--right">
+                                        <img src="img/quote.svg" alt="quote icon" class="testimonial__icon">
+                                        <blockquote class="testimonial__blockquoute--1">
+                                            <p>
+                                               Any Time We Start Something New It Is Exciting And We Are Very Motivated And Committed. As Time Goes By.
+                                            </p>
+                                            <p class="testimonial__name">&mdash; Devil Roy Barman </p>
+                                        </blockquote>
+                                    </div>
+                                    <div class="testimonial__detail--left">
+                                        <img src="img/client 1.jpg" alt="Client" class="testimonial__img">
+                                    </div>
+                            </div>        
+                        </li>
+                        <li class="glide__slide" id="#options-autoplay-input">
+                            <div class="testiominal__item">
+                                <div class="testimonial__detail--right">
+                                        <img src="img/quote.svg" alt="quote icon" class="testimonial__icon">
+                                        <blockquote class="testimonial__blockquoute--1">
+                                            <p>
+                                               Me and my lovely daughters came here to celebrate Alishy's graduation and your setup was amazing. The food was good too.
+                                            </p>
+                                            <p class="testimonial__name">&mdash; Devil Roy Barman </p>
+                                        </blockquote>
+                                    </div>
+                                    <div class="testimonial__detail--left">
+                                        <img src="img/client 2.jpg" alt="Client" class="testimonial__img">
+                                    </div>
+                            </div>
+                        </li>
+                        <li class="glide__slide" id="#options-autoplay-input">
+                                <div class="testiominal__item">
+                                    <div class="testimonial__detail--right">
+                                            <img src="img/quote.svg" alt="quote icon" class="testimonial__icon">
+                                            <blockquote class="testimonial__blockquoute--1">
+                                                <p>
+                                                   Any Time We Start Something New It Is Exciting And We Are Very Motivated And Committed. As Time Goes By.
+                                                </p>
+                                                <p class="testimonial__name">&mdash; Devil Roy Barman </p>
+                                            </blockquote>
+                                        </div>
+                                        <div class="testimonial__detail--left">
+                                            <img src="img/client 1.jpg" alt="Client" class="testimonial__img">
+                                        </div>
+                                </div>        
+                            </li>
+                      </ul>
+                    </div>
+                    <div class="glide__arrows" data-glide-el="controls">
+                            <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><i class="fas fa-caret-left"></i></button>
+                            <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><i class="fas fa-caret-right"></i></button>
+                    </div>
+                        <div class="glide__bullets" data-glide-el="controls[nav]">
+                            <button class="glide__bullet" data-glide-dir="=0"></button>
+                            <button class="glide__bullet" data-glide-dir="=1"></button>
+                            <button class="glide__bullet" data-glide-dir="=2"></button>
+                        </div>
+                  </div>
+     </div>
+
+     <section class="recipe" id="recipe">
+         <img src="img/recipe-wave.svg" alt="wave image" class="recipe__wave">
+         <h2 class="recipe__title title-light">Discover Recipes From Restaurant</h2>
+         <h3 class="recipe__subtitle title-bold">Recent recipes</h3>
+         <div class="recipe__gallery">
+             
+            <figure class="gallery__item gallery__item--1">
+                <img src="img/recipe 1.png" alt="recipe image" class="gallery__img">
+            </figure>
+
+            <figure class="gallery__item gallery__item--2">
+                <img src="img/recipe 2.png" alt="recipe image" class="gallery__img">
+            </figure>
+
+            <figure class="gallery__item gallery__item--3">
+                <img src="img/recipe 3.png" alt="recipe image" class="gallery__img">
+            </figure>
+
+            <figure class="gallery__item gallery__item--4">
+                <img src="img/recipe 4.png" alt="recipe image" class="gallery__img">
+            </figure>
+
+            <figure class="gallery__item gallery__item--5">
+                <img src="img/recipe 5.png" alt="recipe image" class="gallery__img">
+            </figure>
+
+            <figure class="gallery__item gallery__item--6">
+                <img src="img/recipe 6.png" alt="recipe image" class="gallery__img">
+            </figure>
+
+            <figure class="gallery__item gallery__item--7">
+                <img src="img/recipe 7.png" alt="recipe image" class="gallery__img">
+            </figure>
+
+            <figure class="gallery__item gallery__item--8">
+                <img src="img/recipe 8.png" alt="recipe image" class="gallery__img">
+            </figure>
+
+            <figure class="gallery__item gallery__item--9">
+                <img src="img/recipe 9.png" alt="recipe image" class="gallery__img">
+            </figure>
+
+            <figure class="gallery__item gallery__item--10">
+                <img src="img/recipe 10.png" alt="recipe image" class="gallery__img">
+            </figure>
+
+            <figure class="gallery__item gallery__item--11">
+                <img src="img/recipe 11.png" alt="recipe image" class="gallery__img">
+            </figure>
+
+            <figure class="gallery__item gallery__item--12">
+                <img src="img/recipe 12.png" alt="recipe image" class="gallery__img">
+            </figure>
+
+            <figure class="gallery__item gallery__item--13">
+                <img src="img/recipe 13.png" alt="recipe image" class="gallery__img">
+            </figure>
+
+            <figure class="gallery__item gallery__item--14">
+                <img src="img/recipe 14.png" alt="recipe image" class="gallery__img">
+            </figure>
+
+            <figure class="gallery__item gallery__item--15">
+                <img src="img/recipe 15.png" alt="recipe image" class="gallery__img">
+            </figure>
+            
+         </div>
+         <button class="btn">view All Recipes</button>
+         <img src="img/recipe-wave.svg" alt="wave image" class="recipe__wave recipe__wave--down">
+     </section>
+
+     <section class="chef" id="chef">
+         <div class="chef__titles">
+            <h2 class="chef__title title-light">Get to know our amazing chefs</h2>
+            <h3 class="chef__subtitle title-bold">Stay in touch</h3>
+         </div>
+         <div class="chef__detail">
+             <div class="chef__item">
+                <!-- <div class="chef__item--bg"></div> -->
+                <div class="chef__card">
+                    <img src="img/chef-1.png" alt="chef" class="chef__item--photo">
+                </div>
+                <div class="chef__item--names">
+                        <p class="chef__item--name">Devil Roy Barman</p>
+                        <p class="chef__item--position">Founder & Head of Chef</p>
+                </div>
+
+                <div class="hover__detail">
+                    <div class="hover__detail--names">
+                         <p class="hover__detail--name chef__item--name">Devil Roy Barman</p>
+                         <p class="hover__detail--position">Founder & Head of Chef</p>
+                    </div>
+                    <div class="hover__detail--line"></div>
+                    <div class="social">
+                        <div class="social__item">
+                             <i class="social__icon fab fa-facebook-f"></i>
+                        </div>
+                        <div class="social__item">
+                            <i class="social__icon fab fa-twitter"></i>
+                        </div>
+                        <div class="social__item">
+                            <i class="social__icon fab fa-instagram"></i>
+                        </div>
+                    </div>
+                </div>
+
+             </div>
+
+             <div class="chef__item">
+                <!-- <div class="chef__item--bg"></div> -->
+                <div class="chef__card">
+                    <img src="img/chef-2.png" alt="chef" class="chef__item--photo">
+                </div>
+                <div class="chef__item--names">
+                        <p class="chef__item--name">Rene Redzepi</p>
+                        <p class="chef__item--position">Business Developer</p>
+                </div>
+
+                <div class="hover__detail">
+                        <div class="hover__detail--names">
+                             <p class="hover__detail--name chef__item--name">Rene Redzepi</p>
+                             <p class="hover__detail--position">Business Developer</p>
+                        </div>
+                        <div class="hover__detail--line"></div>
+                        <div class="social">
+                                <div class="social__item">
+                                     <i class="social__icon fab fa-facebook-f"></i>
+                                </div>
+                                <div class="social__item">
+                                    <i class="social__icon fab fa-twitter"></i>
+                                </div>
+                                <div class="social__item">
+                                    <i class="social__icon fab fa-instagram"></i>
+                                </div>
+                        </div>
+                </div>
+
+             </div>
+
+             <div class="chef__item">
+                <!-- <div class="chef__item--bg"></div> -->
+                <div class="chef__card">
+                        <img src="img/chef-3.png" alt="chef" class="chef__item--photo">
+                </div>
+                <div class="chef__item--names">
+                        <p class="chef__item--name">David Chang</p>
+                        <p class="chef__item--position">Master Chef</p>
+                </div>
+
+                <div class="hover__detail">
+                        <div class="hover__detail--names">
+                             <p class="hover__detail--name chef__item--name">David Chang</p>
+                             <p class="hover__detail--position">Master Chef</p>
+                        </div>
+                        <div class="hover__detail--line"></div>
+                        <div class="social">
+                                <div class="social__item">
+                                     <i class="social__icon fab fa-facebook-f"></i>
+                                </div>
+                                <div class="social__item">
+                                    <i class="social__icon fab fa-twitter"></i>
+                                </div>
+                                <div class="social__item">
+                                    <i class="social__icon fab fa-instagram"></i>
+                                </div>
+                        </div>
+                </div>
+             </div>
+
+         </div>
+     </section>
+
+     <div class="accomplishment">
+         <div class="accomplishment__item">
+             <img src="img/award-icon.svg" alt="awards" class="accomplishment__icon">
+             <p class="accomplishment__number">328 +</p>
+             <p class="accomplishment__text">Award Win</p>
+         </div>
+         <div class="accomplishment__item">
+            <img src="img/qualified-staff.svg" alt="Qualified staff" class="accomplishment__icon">
+            <p class="accomplishment__number">354 +</p>
+            <p class="accomplishment__text">Qualified staff</p>
+        </div>
+        <div class="accomplishment__item">
+            <img src="img/branches.svg" alt="awards" class="accomplishment__icon">
+            <p class="accomplishment__number">580 +</p>
+            <p class="accomplishment__text">Branches</p>
+        </div>
+        <div class="accomplishment__item">
+            <img src="img/award-icon.svg" alt="awards" class="accomplishment__icon">
+            <p class="accomplishment__number">6028 +</p>
+            <p class="accomplishment__text">Happy Customers</p>
+        </div>
+     </div>
+
+     <section class="reserve" id="reserve">
+        <div class="reserve__titles">
+            <h2 class="reserve__title title-light">Submit Information to Place Order</h2>
+            <h3 class="reserve__subtitle title-bold">Reserve a table</h3>
+        </div>
+
+        <div class="reserve__detail">
+            <img src="img/reserve.png" alt="reserve meal image" class="reserve__img">
+
+            <div class="reserve__item">
+                <form class="reserve__form" action="/action_Page.php" method="get">
+                    <div class="reserve__content">
+                        <div class="reserve__input-form">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="reserve">
+                        </div>
+
+                        <div class="reserve__input-form">
+                                <label for="email">Your Email</label>
+                                <input type="email" name="reserve" id="email">
+                        </div>
+                    </div>
+                    <div class="reserve__content">
+                        <div class="reserve__input-form">
+                                <label for="phone">Phone Number</label>
+                                <input type="number" name="reserve" id="phone">
+                        </div>
+    
+                        <div class="reserve__input-form">
+                                <label for="table">Table For</label>
+                                <select name="reserve" id="table">
+                                    <option value="1 Person">1 Person</option>
+                                    <option value="2 Person">2 Person</option>
+                                    <option value="3 Person">3 Person</option>
+                                    <option value="4 Person">4 Person</option>
+                                    <option value="5 Person">5 Person</option>
+                                </select>
+                        </div>
+                    </div>
+                    <div class="reserve__ocassion">
+                            <label for="ocassion">Table For</label>
+                            <select name="reserve" id="ocassion">
+                                <option value="Birthday">Birthday</option>
+                                <option value="Graduation">Graduation</option>
+                                <option value="Wedding">Wedding</option>
+                                <option value="Engagement">Engagement</option>
+                                <option value="Anniversary">Anniversary</option>
+                            </select>
+                    </div>
+                    <div class="reserve__content">
+                        <div class="reserve__input-form">
+                                <label for="time">Select Time</label>
+                                <input type="time" name="reserve" value="12:30 AM" id="time">
+                        </div>
+    
+                        <div class="reserve__input-form">
+                                <label for="date">Select Date</label>
+                                <input type="date" name="reserve" id="date">
+                        </div>
+                    </div>
+                    <div class="reserve__message">
+                            <label for="message">Your Message</label>
+                        <textarea name="reserve" id="message" cols="30" rows="5"></textarea>
+                    </div>
+                    <div class="reserve__submit">
+                        <input type="submit" value="Reserve Now" id="button">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+     </section>
+
+     <section class="blog" id="blog">
+        <div class="blog__titles">
+            <h2 class="blog__title title-light">Latest updated</h2>
+            <h3 class="blog__subtitle title-bold">Food Blog</h3>
+        </div>
+        <div class="blog__detail">
+            <div class="blog__item">
+                <img src="img/pancakes.png" alt="Japanese pancakes" class="blog__item-photo">
+                <div class="blog__post">
+                    <div class="blog__item-date">
+                        <img src="img/time .svg" alt="Clock icon" class="blog__item-clock">
+                        <p class="blog__item-month">March 24, 2020</p>
+                    </div>
+                    <h3 class="blog__post--title">Fluffy Japanese Pancakes: </h3>         
+                    <p class="blog__post--text">The best part of going to the pancake places, aside from eating the pancakes, 
+                         is that you get to watch them expertly 
+                    </p>
+
+                    <div class="blog__post--button">
+                        <img src="img/line.svg" alt="dotted lines" class="blog__post--line">
+                        <button class="blog__post--cta"><a href="#">Read More</a></button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="blog__item">
+                <img src="img/brunch.png" alt="brunch image" class="blog__item-photo">
+                <div class="blog__post">
+                    <div class="blog__item-date">
+                        <img src="img/time .svg" alt="Clock icon" class="blog__item-clock">
+                        <p class="blog__item-month">March 24, 2020</p>
+                    </div>
+                    <h3 class="blog__post--title">Sunday Brunch: Eggslut’s  </h3>         
+                    <p class="blog__post--text">
+                        It’s nice to watch but also kind of awkward because I’m sure the burger 
+                        peeps don’t really want anyone staring at them
+                    </p>
+
+                    <div class="blog__post--button">
+                        <img src="img/line.svg" alt="dotted lines" class="blog__post--line">
+                        <button class="blog__post--cta"><a href="#">Read More</a></button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="blog__item">
+                <img src="img/panda orange.png" alt="Panda Orange" class="blog__item-photo">
+                <div class="blog__post">
+                    <div class="blog__item-date">
+                        <img src="img/time .svg" alt="Clock icon" class="blog__item-clock">
+                        <p class="blog__item-month">March 24, 2020</p>
+                    </div>
+                    <h3 class="blog__post--title">Copycat Panda Express Orange </h3>         
+                    <p class="blog__post--text">The best part of going to the pancake places, aside from eating the pancakes, 
+                         is that you get to watch them expertly 
+                    </p>
+
+                    <div class="blog__post--button">
+                        <img src="img/line.svg" alt="dotted lines" class="blog__post--line">
+                        <button class="blog__post--cta"><a href="#">Read More</a></button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="blog__item">
+                <img src="img/pork.png" alt="pork sugo" class="blog__item-photo">
+                <div class="blog__post">
+                    <div class="blog__item-date">
+                        <img src="img/time .svg" alt="Clock icon" class="blog__item-clock">
+                        <p class="blog__item-month">March 24, 2020</p>
+                    </div>
+                    <h3 class="blog__post--title">Delfina’s Secret Pork Sugo  </h3>         
+                    <p class="blog__post--text">
+                        It’s nice to watch but also kind of awkward because I’m sure the pork
+                        peeps don’t really want anyone staring at them 
+                    </p>
+
+                    <div class="blog__post--button">
+                        <img src="img/line.svg" alt="dotted lines" class="blog__post--line">
+                        <button class="blog__post--cta"> <a href="#">Read More</a></button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+     </section>
+     
+     <div class="newsletter">
+         <div class="newsletter__detail">
+                <div class="newsletter__item">
+                        <h2 class="newsletter__title">Join our newsletter</h2>
+                        <p class="newsletter__text">
+                            Sign up to our newsletter to get updates of new blog posts and special offer
+                        </p>
+                    </div>
+           
+                    <div class="newsletter__signup">
+                        <input type="email" name="signup" id="newsletter__email" required>
+                        <button class="newsletter__cta"><a href="#">Subscribe</a></button>
+                </div>
+         </div>
+     </div>
+
+     <footer class="footer">
+         <div class="footer__detail">
+             <div class="footer__item">
+                 <h3 class="footer__dev--title">
+                     Dev restaurant
+                 </h3>
+                 <p class="footer__text">
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
+                    invidunt ut labore et dolore magna aliquyam erat, sed .
+                 </p>
+                 <div class="footer__social">
+                    <div class="footer__social--icon footer__social--facebook">
+                        <i class="  fab fa-facebook-f"></i>
+                    </div>
+                    <div class="footer__social--icon footer__social--twitter">
+                        <i class="  fab fa-twitter"></i>
+                    </div>
+                    <div class="footer__social--icon footer__social--instagram">
+                        <i class="  fab fa-instagram"></i>
+                    </div>
+                    <div class="footer__social--icon footer__social--linkedin">
+                        <i class="  fab fa-linkedin-in"></i>
+                    </div>
+                    
+                 </div>
+             </div>
+
+             <div class="footer__item">
+                 <h3 class="footer__title">Opening hours</h3>
+                 <div class="footer__hours">
+                     <img src="img/time .svg" alt="clock icon" class="footer__clock">
+                     <p class="footer__day">Monday</p>
+                     <div class="footer__line"></div>
+                     <p class="footer__time">Closed</p>
+                 </div>
+                 <div class="footer__hours">
+                    <img src="img/time .svg" alt="clock icon" class="footer__clock">
+                    <p class="footer__day">Tue-Fri</p>
+                    <div class="footer__line"></div>
+                    <p class="footer__time">10am - 12am</p>
+                </div>
+                <div class="footer__hours">
+                    <img src="img/time .svg" alt="clock icon" class="footer__clock">
+                    <p class="footer__day">Sat-Sun</p>
+                    <div class="footer__line"></div>
+                    <p class="footer__time">7am - 1am</p>
+                </div>
+                <div class="footer__hours">
+                    <img src="img/time .svg" alt="clock icon" class="footer__clock">
+                    <p class="footer__day">Public Holidays</p>
+                    <div class="footer__line"></div>
+                    <p class="footer__time">7am - 1am</p>
+                </div>
+             </div>
+             <div class="footer__item">
+                 <h3 class="footer__title">Contact Us</h3>
+                 <div class="footer__contact">
+                     <img src="img/call .svg" alt="phone" class="footer__contact--icon">
+                     <p class="footer__contact--text">+1(123) 345 4567</p>
+                 </div>
+                 <div class="footer__contact">
+                    <img src="img/location.svg" alt="location icon" class="footer__contact--icon">
+                    <p class="footer__contact--text footer__contact--text-location">
+                        121/32 Second Street, New York, <br>
+                        King Street, New York <br>
+                        United State
+                    </p>
+                </div>
+                <div class="footer__contact">
+                    <img src="img/email.svg" alt="email" class="footer__contact--icon">
+                    <p class="footer__contact--text"><a href="mailto:muchirijane@outllok.com">muchirijane@outook.com</a></p>
+                </div>
+             </div>
+             <div class="footer__item">
+                 <h3 class="footer__title">Instagram</h3>
+                 <div class="footer__instagram--photos">
+                     <img src="img/img-1.png" alt="photo" class="footer__instagram--image">
+                     <img src="img/img-2.png" alt="photo" class="footer__instagram--image">
+                     <img src="img/img-3.png" alt="photo" class="footer__instagram--image">
+                     <img src="img/img-4.png" alt="photo" class="footer__instagram--image">
+                     <img src="img/img-5.png" alt="photo" class="footer__instagram--image">
+                     <img src="img/img-6.png" alt="photo" class="footer__instagram--image">
+                 </div>
+             </div>
+         </div>
+         <div class="footer__bottom--line"></div>
+         <div class="footer__copyright"> &copy; 2020 ALL Rights Reserved. Designed by Devdesign Studio and  Coded by <a href="https://github.com/muchirijane">Jane Muthoni</a></div>
+     </footer>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <script src="index.js"></script>
+    </main>
+</body>
+</html>

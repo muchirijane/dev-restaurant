@@ -1,0 +1,189 @@
+.chef{
+    grid-column: 1/-1;
+    margin: 8rem 4rem;
+    margin-bottom: 2rem;
+    @media only screen and (max-width: $tab){
+        height: 150rem;
+    }
+
+    &__titles{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    &__detail{
+        margin-top: 50rem;
+        display: flex;
+        justify-content: center;
+        height: 20rem;
+
+        @media only screen and (max-width: $desktop){
+            margin-top: 36rem;
+        }
+
+        @media only screen and (max-width: $tab){
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+        }
+        
+    }
+
+    &__card{
+        @extend %top-position;
+        background: #F5F5F5;
+        padding: 0 6rem;
+
+        @media only screen and (max-width: $md-tab){
+            padding: 0 4rem;
+        }
+
+        @media only screen and (max-width: $tab){
+            padding: 0 14rem;
+        }
+    }
+
+    &__item{
+        display: grid;
+        justify-self: center;
+        padding: 4rem 6rem;
+        transition: all 2s;
+
+        @media only screen and (max-width: $laptop){
+            padding: 4rem 3rem;
+        }
+        @media only screen and (max-width: $md-tab){
+            padding: 4rem 2rem;
+        }
+        @media only screen and (max-width: $tab){
+            margin: -10rem;
+        }
+        
+
+        &:hover{
+            .hover__detail{
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(-8rem);
+            }
+        }
+
+        &--bg{
+            background-color: #F5F5F5;
+            height: 35rem;
+            width: 40rem;
+            z-index: 99;
+        }
+
+        &--photo{
+            height: 40rem;
+            z-index: 100;
+
+            @media only screen and (max-width: $desktop){
+                height: 30rem;
+            }
+
+            @media only screen and (max-width: $md-tab){
+                height: 25rem;
+            }
+
+        }
+
+        &--names{
+            background-color: #F5F5F5;
+            text-align: center;
+            padding: 2rem 0;
+            position: relative;
+            top: -400%;
+            border-bottom-right-radius: 1rem;
+            border-bottom-left-radius: 1rem;
+
+            @media only screen and (max-width: $desktop){
+                top: -300%;
+            }
+            @media only screen and (max-width: $big-desktop){
+                top: -320%;
+            }
+            @media only screen and (max-width: $md-tab){
+                top: -257%;
+            }
+
+        }
+
+        &--name{
+            font-weight: 700;
+            font-size: 2rem;
+            text-transform: uppercase;
+            padding-bottom: .5rem;
+        }
+    }
+}
+
+.hover__detail{
+    background-color: #292929;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    position: relative;
+    top: -260%;
+    z-index: 300;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(8rem);
+
+    @media only screen and (max-width: $desktop){
+        top: -200%;
+    }
+
+    &--names{
+        padding-bottom: 2rem;
+    }
+
+    &--line{
+        width: 50%;
+        height: 1px;
+        background-color: rgba(#fff, .3);
+        margin: auto;
+    }
+}
+
+.social{
+    padding-top: 2rem;
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+
+
+    &__icon{
+         padding: 1rem;
+        //margin-left: -2rem;
+        position: relative;
+        top: 50%;
+        left: 50% !important;
+        transform: translate(-50%, -50%);
+           
+    }
+
+    &__item{
+
+        &:hover{
+            background-color: #fff;
+            color: #000;
+            // border-radius: 50%;
+            height: 4rem;
+            width: 4rem;
+           border-radius: 50%;
+        }
+    }
+}
+
+
+%top-position{
+    position: relative;
+    top: -100%;
+    margin: auto;
+    z-index: 100;
+}

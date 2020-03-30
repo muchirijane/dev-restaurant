@@ -1,0 +1,128 @@
+.menu{
+    grid-column: 1/-1;
+
+    background-image: url(../img/menu-bg.png);
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 10rem;
+    z-index: 100;
+
+    @media only screen and (max-width: $mini-laptop){
+        padding-top: 10rem;
+    }
+
+    &__item{
+        display: grid;
+        grid-template-columns: repeat(8,1fr);
+
+        &:not(:last-child){
+            margin-bottom: 10rem;
+        }
+
+        &--image{
+            grid-column: 2/5;
+            width: 100%;
+            height: 100%;
+            @media only screen and (min-width: $laptop){
+               // width: 0;
+                height: 70%;
+            }
+
+            @media only screen and (max-width: $tab){
+                grid-column: 2/7;
+                height: 50rem;
+            }
+
+            @media only screen and (max-width: $md-mobile){
+                grid-column: 1/7;
+            }
+        }
+
+        &--image2{
+            grid-column: 4/8;
+            grid-row: 1/2;
+
+            @media only screen and (max-width: $tab){
+                grid-column: 3/8;
+            }
+
+            @media only screen and (max-width: $md-mobile){
+                grid-column: 3/9;
+            }
+        }
+    }
+
+    &__detail{
+        grid-column: 5/8;
+        background-color: #fff;
+        padding: 4rem;
+        margin: 5rem 0;
+        margin-left: -5rem;
+
+        @media only screen and (max-width: $tab){
+            grid-column: 2/8;
+            margin: -33rem 0;
+            margin-left: 10rem;
+            margin-bottom: 8rem;
+        }
+
+        @media only screen and (max-width: $md-mobile){
+            grid-column: 1/8;
+            margin-left: 3rem;
+        }
+
+        &--item{
+            display: flex;
+            align-items: center;
+            padding-top: 1rem;
+        }
+
+        &--title{
+            font-weight: 400;
+        }
+
+        &--subtitle{
+            font-size: 3rem;
+            text-transform: uppercase;
+        }
+
+        &--name{
+            padding-right: 3rem;
+        }
+
+        &--line{
+            height: 2px;
+            width: 17rem;
+            background-color: #eeeeee;
+        }
+
+        &--money{
+            padding-left: 2rem;
+            font-weight: 700;
+        }
+
+        &--text{
+            padding-top: 2rem;
+        }
+    }
+
+    &__detail-2{
+        grid-column: 2/5;
+        grid-row: 1/2;
+        margin-left: 0;
+        margin-right: -5rem;
+        margin: 5rem 0;
+
+        @media only screen and (max-width: $tab){
+            grid-column: 2/8;
+            margin-left: -2rem;
+            margin-right: 9rem;
+            grid-row: none;
+            margin-top: -35rem;
+        }
+
+        @media only screen and (max-width: $md-mobile){
+            margin-right: 2rem;
+        }
+    }
+}

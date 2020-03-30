@@ -1,0 +1,85 @@
+#logo{
+    animation: fill 2s ease-in  forwards 3s;
+
+}
+
+#logo path:nth-child(1){
+    stroke-dasharray: 96.65px;
+    stroke-dashoffset: 96.65px;
+    animation: outline 2s ease-in forwards;
+}
+#logo path:nth-child(2){
+    stroke-dasharray: 70.19px;
+    stroke-dashoffset: 70.19px;
+    animation: outline 2s ease-in forwards 0.2s;
+}
+#logo path:nth-child(3){
+    stroke-dasharray: 51.41px;
+    stroke-dashoffset: 51.41px;
+    animation: outline 2s ease-in forwards 0.4s;
+}
+#logo path:nth-child(4){
+    stroke-dasharray: 98.62px;
+    stroke-dashoffset: 98.62px;
+    animation: outline 2s ease-in forwards 0.6s;
+}
+#logo path:nth-child(5){
+    stroke-dasharray: 70.19px;
+    stroke-dashoffset: 70.19px;
+    animation: outline 2s ease-in forwards 0.8s;
+}
+#logo path:nth-child(6){
+    stroke-dasharray: 62.89px;
+    stroke-dashoffset: 62.89px;
+    animation: outline 2s ease-in forwards 1s;
+}
+#logo path:nth-child(7){
+    stroke-dasharray: 51.32px;
+    stroke-dashoffset: 51.32px;
+    animation: outline 2s ease-in forwards 1.2s;
+}
+#logo path:nth-child(8){
+    stroke-dasharray: 70.67px;
+    stroke-dashoffset: 70.67px;
+    animation: outline 2s ease-in forwards 1.4s;
+}
+#logo path:nth-child(9){
+    stroke-dasharray: 63.56px;
+    stroke-dashoffset: 63.56px;
+    animation: outline 2s ease-in forwards 1.6s;
+}
+#logo path:nth-child(10){
+    stroke-dasharray: 40.31px;
+    stroke-dashoffset: 40.31px;
+    animation: outline 2s ease-in forwards 1.8s;
+}
+#logo path:nth-child(11){
+    stroke-dasharray: 70.67px;
+    stroke-dashoffset: 70.67px;
+    animation: outline 2s ease-in forwards 2s;
+}
+#logo path:nth-child(12){
+    stroke-dasharray: 63.90px;
+    stroke-dashoffset: 63.90px;
+    animation: outline 2s ease-in forwards 2.2s;
+}
+#logo path:nth-child(13){
+    stroke-dasharray: 51.32px;
+    stroke-dashoffset: 51.32px;
+    animation: outline 2s ease-in forwards 2.4s;
+}
+
+@keyframes outline {
+   to{
+    stroke-dashoffset: 0;
+   }
+}
+
+@keyframes fill {
+    from{
+        fill: transparent;
+    }
+    to{
+        fill: #fff;
+    }
+}

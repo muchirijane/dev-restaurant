@@ -1,0 +1,176 @@
+.reserve{
+    grid-column: 1/-1;
+    margin: 8rem 0;
+
+    &__titles{
+        text-align: center;
+        margin-bottom: 6rem;
+    }
+
+    &__detail{
+        display: flex;
+    }
+
+    &__img{
+        height: 80rem;
+        z-index: 99;
+
+        @media only screen and (max-width: $desktop){
+            height: 70rem;
+        }
+
+        @media only screen and (max-width: $big-laptop){
+            height: 65rem;
+         }
+
+         @media only screen and (max-width: $laptop){
+           height: 60rem;
+        }
+
+        @media only screen and (max-width: $bg-mobile){
+            width: 100%;
+        }
+    }
+
+    &__item{
+        background: #f5f5f5;
+        padding: 5rem;
+        height: 70rem;
+        width: 55rem;
+        z-index: 100;
+        margin-left: -7rem;
+        margin-top: 6rem;
+
+        @media only screen and (max-width: $mini-laptop){
+            height: 73rem;
+        }
+
+        @media only screen and (max-width: $md-tab){
+            margin-left: -37rem;
+            margin-top: 16rem;
+         }
+
+         @media only screen and (max-width: $tab){
+             font-size: 2rem;
+            margin-left: -60rem;
+            height: 84rem;
+            width: 60rem;
+        }
+
+        @media only screen and (max-width: $bg-mobile){
+            margin-left: -67rem;
+        }
+
+        @media only screen and (max-width: $md-mobile){
+            margin-left: -60rem;
+            padding: 6rem;
+        }
+        
+
+    }
+
+    &__content{
+        display: flex;
+    }
+
+    &__input-form{
+        display: flex;
+        flex-direction: column;
+        margin: 0 1rem;
+    }
+
+    &__ocassion{
+        display: flex;
+        flex-direction: column;
+        outline: none;
+        border: none;
+        margin-bottom: 3rem;
+        width: 42rem;
+       margin-left: 1rem;
+    }
+    
+    &__message{
+        display: flex;
+        flex-direction: column;
+        margin-left: 1rem;
+    }
+    
+}
+
+input{
+    outline: none;
+    border: none;
+    margin-bottom: 3rem;
+    padding: 1rem;
+
+}
+label{
+    margin-bottom: 1rem;
+}
+
+#name,
+#email,
+#phone,
+#time,
+#date{
+    height: 3rem;
+    width: 20rem;
+    @media only screen and (max-width: $tab){
+        height: 5rem;
+        width: 25rem;
+    }
+
+
+}
+
+#table{
+    outline: none;
+    border: none;
+    width: 20rem;
+    height: 3rem;
+
+    @media only screen and (max-width: $tab){
+        height: 5rem;
+        width: 25rem;
+    }
+}
+
+#message{
+    border: none;
+    outline: none;
+    padding: 1rem
+}
+
+#button{
+    background: #000;
+    color: #fff;
+    padding: 2rem 5rem;
+    margin-top: 3rem;
+    border-radius: 3rem;
+    transition: all .2s;
+    outline: none;
+
+    @media only screen and (max-width: $md-mobile){
+        margin: 3rem 16rem;
+    }
+
+    &:hover{
+        transform: scale(1.06);
+    }
+
+    &:active{
+        transform: translateY(1rem);
+    }
+}
+
+#ocassion{
+    border: none;
+    outline: none;
+    height: 4.4rem;
+    padding: 1rem;
+
+    @media only screen and (max-width: $tab){
+        height: 5.4rem;
+        width: 53rem;
+    }
+}

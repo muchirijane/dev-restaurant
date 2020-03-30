@@ -1,0 +1,69 @@
+.testimonial{
+    grid-column: 1/-1;
+    margin-top: -1rem;
+    z-index: 10;
+
+    &__img{
+        height: 100%;
+        width: 100%;
+
+        @media only screen and (max-width: $bg-mobile){
+            height: 40rem;
+        }
+    }
+
+    &__detail--right{
+        background-color: #292929;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 3rem 8rem;
+        font-size: 2rem;
+        font-weight: 700;
+
+    }
+
+    &__icon{
+        margin-bottom: 5rem;
+    }
+
+    &__name{
+        font-weight: 400;
+    }
+
+    p{
+        text-align: center;
+        padding-bottom: 4rem;
+    }
+
+}
+
+.glide__bullets{
+    left: 25%;
+}
+
+.glide__arrow--left{
+
+    @media only screen and (max-width: $tab){
+        left: 1rem;
+    }
+}
+
+.glide__arrow--right{
+
+    @media only screen and (max-width: $tab){
+        right: 1rem;
+    }
+ }
+ .gride__arrow{
+     
+    @media only screen and (max-width: $tab){
+        padding: 5px 6px;
+    }
+ }
+
+.testiominal__item{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+}

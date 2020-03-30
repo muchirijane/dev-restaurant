@@ -1,0 +1,128 @@
+.footer{
+    grid-column: 1/-1;
+    background-image: url(../img/background-black.svg);
+    background-size: cover;
+    color: #fff;
+    padding: 6rem;
+    padding-top: 28rem;
+    z-index: 99;
+    margin-top: -22rem;
+
+    @media only screen and (max-width: $mini-laptop){
+        padding-top: 22rem;
+    }
+
+    &__detail{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        grid-gap: 4rem;
+
+        @media only screen and (max-width: $md-laptop){
+            grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+            grid-gap: 8rem;
+        }
+    }
+
+    &__dev--title{
+        font-size: 3rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        padding-bottom: 3rem;
+    }
+
+    &__social{
+        padding-top: 4rem;
+        display: flex;
+
+        &--icon{
+           margin-left: 2rem;
+           height: 4rem;
+            width: 4rem;
+           border-radius: 50%;
+        }
+
+        &--facebook{
+            background-color: #3B5999;
+        }
+
+        &--twitter{
+            background-color: #55ACEE;
+        }
+
+        &--instagram{
+            background-color: #E4405F;
+        }
+
+        &--linkedin{
+            background-color: #0077B5;
+        }
+    }
+
+    &__title{
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        padding-bottom: 3rem;
+        padding-top: 1rem;
+    }
+
+    &__hours{
+        display: flex;
+        align-items: center;
+    }
+
+    &__line{
+        height: 1px;
+        width: 7rem;
+        background-color: #fff;
+        margin: 0 2rem;
+    }
+
+    &__contact{
+        display: flex;
+        align-items: first baseline;
+
+        &--icon{
+            padding-right: 2rem;
+        }
+
+        &--text-location{
+            padding-top: 3rem;
+            padding-bottom: 2rem;
+        }
+
+        &--text{
+            a:link,
+            a:visited{
+                text-decoration: none;
+                color: #fff;
+            }
+        }
+    }
+
+    &__bottom--line{
+        height: 1px;
+        background-color: rgba(#fff, .4);
+        width: 100%;
+        margin-top: 4rem;
+    }
+
+    &__copyright{
+        text-align: center;
+        padding-top: 2rem;
+
+        a:link,
+        a:visited{
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+}
+
+.fab{
+    display: flex;
+    justify-content: center;
+    padding-top: 1.2rem;
+    position: relative;
+    left: 30%;
+}

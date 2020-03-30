@@ -1,0 +1,80 @@
+$font-primary: 'Nunito', sans-serif;
+
+$color-btn: #d5a83e;
+
+//BREAKPOINTS
+$large-desktop: 118.75em; // 1900px
+$md-dektop: 100em; //1600px
+$desktop: 87.5em; //1400px 
+$big-desktop: 81.25em; //1300px
+$big-laptop: 75em; //1200px
+$mini-laptop: 68.75em; //1100px
+$md-laptop: 62.5em; //1000px
+$sm-laptop: 56.25em; //900px
+$laptop: 50em; //800px
+$md-tab: 43.75em; //700px
+$tab: 37.5em; //600px
+$tab-2: 33.75em; //540px
+$bg-mobile: 31.25em; //500px;
+$md-mobile: 25em; //400px
+
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding:  0;
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 62.5%;  // 10px/16px = 62.5% ---> 1rem = 10px
+    box-sizing: border-box;
+
+    @media only screen and (min-width: $large-desktop){
+        font-size: 80%;
+    }
+
+    @media only screen and (min-width: $md-dektop){
+        font-size: 70%;
+    }
+
+    @media only screen and (max-width: $desktop){
+        font-size: 60%;
+    }
+
+    @media only screen and (max-width: $big-desktop){
+        font-size: 50%;
+    }
+
+    @media only screen and (max-width: $md-laptop){
+        font-size: 40%;
+    }
+    
+   
+}
+
+body{
+    font-family: $font-primary;
+    font-size: 1.6rem;
+    //color: $color-grey-dark-2;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.container{
+    display: grid;
+    grid-template-rows:  100vh  repeat(10, min-content);
+    grid-template-columns:[full-start] minmax(10rem, 1fr)[center-start] repeat(12,[col-start] minmax(min-content, 14rem) [col-end])[center-end] minmax(10rem, 1fr)[full-end];
+
+    @media only screen and (max-width: $mini-laptop){
+        grid-template-rows:  90vh  repeat(10, min-content);
+    }
+    @media only screen and (max-width: $md-laptop){
+        grid-template-rows:  80vh  repeat(10, min-content);
+    }
+
+    @media only screen and (max-width: $tab){
+        grid-template-rows:  70vh  repeat(10, min-content);
+    }
+}
