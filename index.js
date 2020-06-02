@@ -1,8 +1,22 @@
 const logo = document.querySelectorAll('#logo path');
+const navList = document.querySelector('.nav__list');
+const navItems = document.querySelectorAll('.nav__item');
+const navLink = document.querySelectorAll('.nav__link');
+const menu = document.querySelector('.checkbox-menu');
 
 for(let i = 0; i < logo.length; i++){
      console.log(`This letter ${i} is ${logo[i].getTotalLength()}`);
 }
+
+menu.addEventListener('click', ()=>{
+  navList.style.width = '100%';
+  navList.style.display = 'flex';
+})
+navList.addEventListener('click', () =>{
+  navList.style.width = '0';
+  navList.style.display = 'none';
+});
+
 
 
 //ANIMATION
